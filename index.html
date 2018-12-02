@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>EQ Finder</title>
+   <style type="text/css">
+         body {
+            padding: 50px;
+         }
+         .plot {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+         }
+         #data, #random, #trained {
+            margin: 30px;
+         }
+         .caption {
+            font-weight: bold;
+         }
+         .coeff {
+            font-weight: normal;
+         }
+   </style>
+   <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@0.13.3/dist/tf.min.js"> </script>
+   </head>
+   <body>
+      <h2>Equation Finder</h2>
+      
+      <div class="plot">
+         <div id="data">
+            <div class="caption">Original Data</div> 
+            <div class="caption">True Coefficients: <span class="coeff">
+            </span></div>
+            <div class="plot"></div>
+         </div>
+         <div id="random">
+         <div class="caption">Random Coefficients</div> 
+         <div class="caption">Coefficients: <span class="coeff">
+            </span></div>
+            <div class="plot"></div>
+         </div>
+         <div id="trained">
+         <div class="caption">Trained Coefficients</div> 
+         <div class="caption">Coefficients: <span class="coeff">
+            </span></div>
+            <div class="plot"></div>
+         </div>
+      </div>
+      <script type="text/javascript" src="index.js"></script>
+   </body>
+</html>
